@@ -279,7 +279,7 @@
             </div>
         </section>
         <!-- home schedule section html start  -->
-        
+
         <!-- home pricing section htm start -->
 {{--        <section class="home-pricing-section">--}}
 {{--            <div class="overlay"></div>--}}
