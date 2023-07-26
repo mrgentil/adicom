@@ -7,6 +7,7 @@
 {{--    <link rel="icon" type="image/png" href="{{asset('assets/logo.png')}}">--}}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('assets/vendors/bootstrap/css/bootstrap.min.css')}}" media="all">
+    <link rel="icon" type="image/png" href="{{asset('assets/logo.png')}}">
     <!-- Fonts Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}">
     <!-- Elmentkit Icon CSS -->
