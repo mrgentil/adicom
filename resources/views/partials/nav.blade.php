@@ -1,39 +1,41 @@
 <div class="main-navigation col-lg-9 justify-content-between d-flex align-items-center">
     <nav id="navigation" class="navigation d-none d-lg-inline-block">
         <ul>
-            <li class="current-menu-item {{ Request::is('/') ? 'active' : '' }}">
+            <li>
                 <a href="{{url('/')}}">Accuiel</a>
             </li>
-            <li class="menu-item-has-children">
+            <li>
                 <a href="#">ADICOM</a>
                 <ul>
-                    <li class="{{ Request::is('adicom-academy') ? 'active' : '' }}">
+                    <li>
                         <a href="{{route('adicom.academie')}}">ADICOM ACADEMY </a>
                     </li>
-                    <li class="{{ Request::is('adicom-awards') ? 'active' : '' }}">
+                    <li>
                         <a href="{{route('adicom.awards')}}">ADICOM AWARDS</a>
                     </li>
-                    <li class="{{ Request::is('adicom-forum') ? 'active' : '' }}">
+                    <li>
                         <a href="{{route('adicom.forum')}}">ADICOM FORUM</a>
                     </li>
-                    <li class="{{ Request::is('adicom-4-good') ? 'active' : '' }}">
+                    <li>
                         <a href="{{route('adicom.good')}}">ADICOM 4 GOOD</a>
                     </li>
-                    <li class="{{ Request::is('adicom-watch') ? 'active' : '' }}">
+                    <li>
                         <a href="{{route('adicom.watch')}}">ADICOM WATCH</a>
                     </li>
+                    <li>
+                        <a href="{{route('adicom.podcast')}}">ADICOM PODCAST</a>
+                    </li>
                 </ul>
-            </li>
-            <li class="{{ Request::is('editions') ? 'active' : '' }}">
+            <li>
                 <a href="{{route('edition.index')}}">Editions</a>
             </li>
-            <li class="{{ Request::is('medias') ? 'active' : '' }}">
+            <li>
                 <a href="{{route('media.index')}}">Médias</a>
             </li>
-            <li class="{{ Request::is('faq') ? 'active' : '' }}">
+            <li>
                 <a href="{{route('faqs.index')}}">FAQ</a>
             </li>
-            <li class="{{ Request::is('contact-us') ? 'active' : '' }}">
+            <li>
                 <a href="{{route('contact.index')}}">Contact</a>
             </li>
         </ul>

@@ -35,28 +35,23 @@
                     <div class="header-social social-links">
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/" target="_blank">
+                                <a href="https://web.facebook.com/AdicomDays?_rdc=1&_rdr" target="_blank">
                                     <i class="fab fa-facebook" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.twitter.com/" target="_blank">
+                                <a href="https://twitter.com/adicomdays" target="_blank">
                                     <i class="fab fa-twitter" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/" target="_blank">
+                                <a href="https://www.youtube.com/channel/UC3EJNtj43Kete9tz7Bsa1aQ" target="_blank">
                                     <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="https://www.instagram.com/adicomdays/" target="_blank">
                                     <i class="fab fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>

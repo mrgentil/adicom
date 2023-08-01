@@ -53,7 +53,7 @@ class HomeController extends Controller
         $abouts = About::all();
         $testimonals = Testimonal::all();
         $participations = Participation::all();
-        $speakers = $this->speakerRepository->getLatest(4);
+        $speakers = $this->speakerRepository->getLatest(8);
         $medias = $this->mediaRepository->getLatest(6);
         return view('home',compact('banners','speakers','medias','partners','abouts','galeries','testimonals','participations'));
     }

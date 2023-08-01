@@ -34,4 +34,9 @@ class ADICOMController extends Controller
     {
         return view('adicom.watch');
     }
+
+    public function podcast()
+    {
+        return view('adicom.podcast');
+    }
 }

@@ -1,1 +1,5 @@
-
+.menu a.active {
+    background-color: #FF9600; /* Couleur de fond pour le lien actif */
+    color: #fff; /* Exemple : Mettre en gras le texte du lien actif */
+    /* Ajoutez d'autres styles selon vos besoins */
+}

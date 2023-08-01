@@ -12483,4 +12483,14 @@ product slider range for price css
     margin-top: 20px;
 }
 
+.menu-item.active {
+    background-color: #FF9600; /* Couleur de fond pour le lien actif */
+    color: #fff; /* Couleur du texte pour le lien actif */
+}
+
+.menu a.active {
+    background-color: #FF9600; /* Couleur de fond pour le lien actif */
+    color: #fff; /* Exemple : Mettre en gras le texte du lien actif */
+    /* Ajoutez d'autres styles selon vos besoins */
+}
 /*# sourceMappingURL=style.css.map */

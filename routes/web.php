@@ -30,6 +30,7 @@ Route::get('/adicom-awards', [App\Http\Controllers\ADICOMController::class, 'awa
 Route::get('/adicom-forum', [App\Http\Controllers\ADICOMController::class, 'forum'])->name('adicom.forum');
 Route::get('/adicom-4-good', [App\Http\Controllers\ADICOMController::class, 'good'])->name('adicom.good');
 Route::get('/adicom-watch', [App\Http\Controllers\ADICOMController::class, 'watch'])->name('adicom.watch');
+Route::get('/adicom-podcast', [App\Http\Controllers\ADICOMController::class, 'podcast'])->name('adicom.podcast');
 Route::resource('faqs', FaqController::class);
 Route::get('/contact-us', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
