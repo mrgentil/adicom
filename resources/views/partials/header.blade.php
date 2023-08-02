@@ -71,7 +71,7 @@
                 <div class="site-identity col-lg-3">
                     <p class="site-title">
                         <a href="{{url('/')}}">
-                            <img src="{{asset('assets/img/eventum4.png')}}" alt="logo">
+                            <img src="{{asset('assets/img/ADICOM LOGO.png')}}" alt="logo">
                         </a>
                     </p>
                 </div>

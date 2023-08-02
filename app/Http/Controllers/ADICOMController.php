@@ -20,9 +20,7 @@ class ADICOMController extends Controller
 
     public function academie()
     {
-        $academies = Academy::query()
-            ->orderBy('id', 'desc');
-
+        $academies = Academy::all();
         return view('adicom.academy',compact('academies'));
     }
 

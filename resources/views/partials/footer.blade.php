@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <aside class="widget widget_text img-textwidget">
                         <div class="footer-logo">
-                            <a href="{{url('/')}}"><img src="{{asset('assets/img/eventum4.png')}}" alt="logo"></a>
+                            <a href="{{url('/')}}"><img src="{{asset('assets/img/ADICOM LOGO.png')}}" alt="logo"></a>
                         </div>
                         <div class="textwidget widget-text">
                             Besoin de plus d'informations ? N’hésitez pas à nous contacter par
