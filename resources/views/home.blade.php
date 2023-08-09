@@ -46,15 +46,15 @@
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6">
                         <div class="time-counter-wrap">
-                            <div class="time-counter" data-date="2023-12-24 23:58:58">
+                            <div class="time-counter" data-date="2023-11-01 00:00:00">
                                 <!-- Date Formate Input yyyy-mm-dd hh:mm:ss -->
                                 <div class="counter-time">
                                     <span class="counter-days">207</span>
-                                    <span class="label-text">Days</span>
+                                    <span class="label-text">Jours</span>
                                 </div>
                                 <div class="counter-time">
                                     <span class="counter-hours">15</span>
-                                    <span class="label-text">Hours</span>
+                                    <span class="label-text">Heures</span>
                                 </div>
                                 <div class="counter-time">
                                     <span class="counter-minutes">32</span>
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="counter-time">
                                     <span class="counter-seconds">53</span>
-                                    <span class="label-text">Seconds</span>
+                                    <span class="label-text">Secondes</span>
                                 </div>
                             </div>
                         </div>

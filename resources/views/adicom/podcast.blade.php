@@ -57,7 +57,6 @@
 
                                 </div>
                             </div>
-                        </div>
                     </section>
                 </div>
                 <!--.page-content-->
@@ -67,3 +66,5 @@
         <!--site-content-->
     </div>
 @endsection
+
+

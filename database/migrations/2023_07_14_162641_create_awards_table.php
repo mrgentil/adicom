@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('awards', function (Blueprint $table) {
             $table->id();
-            $table->longText('content');
+            $table->string('name');
+            $table->string('image');
+            $table->string('function');
+            $table->integer('votes')->default(0);
             $table->timestamps();
         });
     }
