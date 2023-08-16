@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Academy;
 use App\Models\Award;
+use App\Models\Galery;
 use App\Repositories\PodcastRepository;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,8 @@ class ADICOMController extends Controller
     public function awards()
     {
         $award = Award::all();
-        return view('adicom.awards',compact('award'));
+        $galeries = Galery::all();
+        return view('adicom.awards',compact('award','galeries'));
     }
 
     public function forum()

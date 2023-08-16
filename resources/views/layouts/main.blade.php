@@ -53,9 +53,23 @@
     <meta name="author" content="Tshitsho Bedi"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#78AB4E"/>
     <link href="{{ asset('node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css') }}" rel="stylesheet">
-    <title>@section('title')
-            ADICOM
-        @show</title>
+
+    <link id="default-css" rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" media="all"/>
+
+    <link href="{{asset('css/animations.css')}}" rel="stylesheet" type="text/css" media="all"/>
+    <link id="shortcodes-css" href="{{asset('css/shortcodes.css')}}" rel="stylesheet" type="text/css" media="all"/>
+    <link id="skin-css" href="{{asset('skins/red/style.css')}}" rel="stylesheet" media="all"/>
+    <link href="{{asset('css/isotope.css')}}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{asset('css/prettyPhoto.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/pace.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css" media="all"/>
+    <script src="{{asset('js/modernizr.js')}}"></script>
+
+
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css"/>
+
+    <title>@section('title') ADICOM @show</title>
+
 </head>
 
 <body class="home">
@@ -87,7 +101,7 @@
         </div>
     </div>
 </div>
-@stack('js')
+
 <!-- JavaScript -->
 <script src="{{ asset('node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js') }}"></script>
 <script>
@@ -160,5 +174,18 @@
 <!--owl.carousel-->
 <script src="{{asset('cast/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('cast/js/owl.carousel2.thumbs.js')}}"></script>
+
+<script src="{{asset('js/jquery-1.11.2.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.tabs.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery-migrate.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.isotope.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.isotope.perfectmasonry.min.js')}}"></script>
+<script src="{{asset('js/jquery.prettyPhoto.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.validate.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.bxslider.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jsplugins.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/controlpanel.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/custom.js')}}"></script>
+@stack('js')
 </body>
 </html>
