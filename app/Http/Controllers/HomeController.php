@@ -48,20 +48,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        $targetDate = Carbon::create(2023, 11, 4, 0, 0, 0); // Date cible
-//
-//        $now = Carbon::now(); // Date et heure actuelles
-//
-//        $diff = $targetDate->diff($now);
-//
-//        $countdown = [
-//            'days' => $diff->days,
-//            'hours' => $diff->h,
-//            'minutes' => $diff->i,
-//            'seconds' => $diff->s,
-//        ];
-
-
 
         $banners = Banner::all();
         $partners = Partner::all();

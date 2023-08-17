@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ADICOMController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/adicom-academy', [App\Http\Controllers\ADICOMController::class, 'academie'])->name('adicom.academie');
 Route::get('/adicom-awards', [App\Http\Controllers\ADICOMController::class, 'awards'])->name('adicom.awards');
+Route::get('/category/{categoryId}', [ADICOMController::class, 'showCategory'])->name('category');
 Route::post('/adicom-awards-vote', [App\Http\Controllers\ADICOMController::class, 'vote'])->name('adicom.vote');
 Route::get('/adicom-forum', [App\Http\Controllers\ADICOMController::class, 'forum'])->name('adicom.forum');
 Route::get('/adicom-4-good', [App\Http\Controllers\ADICOMController::class, 'good'])->name('adicom.good');

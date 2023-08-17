@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Academy;
 use App\Models\Award;
+use App\Models\AwardGalery;
 use App\Models\Galery;
 use App\Repositories\PodcastRepository;
 use Illuminate\Http\Request;
@@ -26,13 +27,26 @@ class ADICOMController extends Controller
         return view('adicom.academy',compact('academies'));
     }
 
-    public function awards()
+    public function awards(Request $request)
     {
         $award = Award::all();
-        $galeries = Galery::all();
-        return view('adicom.awards',compact('award','galeries'));
+        $awardGaleries = AwardGalery::all();
+        // Récupérer l'ID de la dernière catégorie
+        $lastCategoryId = $awardGaleries->last()->category->id;
+
+        // Récupérer l'ID de catégorie sélectionné (s'il existe)
+        $selectedCategoryId = $request->input('categoryId', $lastCategoryId);
+
+
+        return view('adicom.awards',compact('award','awardGaleries','selectedCategoryId'));
     }
 
+    public function showCategory($categoryId)
+    {
+        $categoryImages = AwardGalery::where('category_id', $categoryId)->first();
+
+        return view('adicom.awards',compact('categoryImages'));
+    }
     public function forum()
     {
         return view('adicom.forum');
