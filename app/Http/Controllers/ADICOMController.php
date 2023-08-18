@@ -6,6 +6,7 @@ use App\Models\Academy;
 use App\Models\Award;
 use App\Models\AwardGalery;
 use App\Models\Galery;
+use App\Repositories\ForumRepository;
 use App\Repositories\PodcastRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,9 +18,15 @@ class ADICOMController extends Controller
      */
     private PodcastRepository $podcastRepository;
 
-    public function __construct(PodcastRepository $podcastRepository)
+    /**
+     * @var ForumRepository
+     */
+    private ForumRepository $forumRepository;
+
+    public function __construct(PodcastRepository $podcastRepository, ForumRepository $forumRepository)
     {
         $this->podcastRepository = $podcastRepository;
+        $this->forumRepository = $forumRepository;
     }
 
     public function academie()
@@ -50,7 +57,8 @@ class ADICOMController extends Controller
     }
     public function forum()
     {
-        return view('adicom.forum');
+        $forums = $this->forumRepository->getLatest(8);
+        return view('adicom.forum',compact('forums'));
     }
 
     public function good()
@@ -102,6 +110,13 @@ class ADICOMController extends Controller
         $user->update(['last_voted_at' => now()]);
 
         return redirect()->back()->with('message', 'Vote enregistré avec succès.');
+    }
+
+    public function show(string $slug)
+    {
+        $forums = $this->forumRepository->getForum($slug);
+        $latest_events = $this->forumRepository->getLatest(3);
+        return view('adicom.forum-show', compact('forums','latest_events'));
     }
 
 }

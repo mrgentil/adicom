@@ -50,7 +50,7 @@
                         <section id="primary" class="content-full-width">
                             <aside class="widget widget_categories">
                                 <div class="section-title">
-                                    <h3> Categories </h3>
+                                    <h3> LES LAUREATS DES AUTRES EDITIONS </h3>
                                 </div>
                                 @foreach($awardGaleries as $galery)
                                     <ul>
@@ -84,15 +84,17 @@
                                     <div class="dt-sc-hr-invisible-small"></div>
                                 </article>
                             @endforeach
-
-
-
-
                         </section>
                         <div class="dt-sc-hr-invisible-small"></div>
                     </div>
                 </div>
                 <div class="pricing-table-inner">
+                    <div class="container">
+                        <div class="section-head text-center col-lg-8 offset-lg-2">
+                            <h3 class="section-title">
+                                LES PROCHAINS CANDIDATS  !!
+                            </h3>
+                        </div>
                     <div class="row align-items-center justify-content-center">
                         @foreach($award as $item)
                             <div class="col-lg-4 col-sm-6 ">
@@ -130,34 +132,6 @@
                         @endforeach
 
                     </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="price-booking">
-            <div class="container">
-                <div class="book-content">
-                    <div class="book-reason">
-                        <div class="section-head">
-                            <span class="section-sub-title ">BOOK A SEAT</span>
-                            <h3 class="section-title">
-                                DON'T MISS OUR CONFERENCE EVENT!
-                            </h3>
-                            <p class="section-paragraph">
-                                Condimentum rerum exercitation accusamus fugit irure, malesuada. Omnis anim accusantium
-                                dolorem dapibus, ex modi in quam eros voluptatum malesuada dicta, assumenda nulla
-                                penatibus.
-                            </p>
-                        </div>
-                        <div class="book-btn">
-                            <a href="" class="button-round-primary">Votez</a>
-                        </div>
-                    </div>
-                    <figure class="booking-banner-image">
-                        <div class="pattern-overlay overlay-circle"></div>
-                        <img src="{{asset('assets/img/eventum-img38.png')}}" alt="">
-                    </figure>
                 </div>
             </div>
         </section>

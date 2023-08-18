@@ -31,6 +31,7 @@ Route::get('/adicom-awards', [App\Http\Controllers\ADICOMController::class, 'awa
 Route::get('/category/{categoryId}', [ADICOMController::class, 'showCategory'])->name('category');
 Route::post('/adicom-awards-vote', [App\Http\Controllers\ADICOMController::class, 'vote'])->name('adicom.vote');
 Route::get('/adicom-forum', [App\Http\Controllers\ADICOMController::class, 'forum'])->name('adicom.forum');
+Route::get('/adicom-forum/{slug}', [App\Http\Controllers\ADICOMController::class, 'show'])->name('adicom.forum.show');
 Route::get('/adicom-4-good', [App\Http\Controllers\ADICOMController::class, 'good'])->name('adicom.good');
 Route::get('/adicom-watch', [App\Http\Controllers\ADICOMController::class, 'watch'])->name('adicom.watch');
 Route::get('/adicom-podcast', [App\Http\Controllers\ADICOMController::class, 'podcast'])->name('adicom.podcast');
