@@ -15,7 +15,7 @@ use TCG\Voyager\Facades\Voyager;
 class Podcast extends Model
 {
     use HasFactory;
-    protected $translatable = ['title', 'seo_title', 'link','slug', 'meta_description', 'meta_keywords'];
+    protected $translatable = ['title', 'seo_title', 'link','slug', 'meta_description', 'meta_keywords','image'];
 
 
 

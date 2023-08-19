@@ -9,6 +9,7 @@ use App\Models\Galery;
 use App\Models\Good;
 use App\Repositories\ForumRepository;
 use App\Repositories\PodcastRepository;
+use App\Repositories\WatchRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,10 +25,13 @@ class ADICOMController extends Controller
      */
     private ForumRepository $forumRepository;
 
-    public function __construct(PodcastRepository $podcastRepository, ForumRepository $forumRepository)
+    private WatchRepository $watchRepository;
+
+    public function __construct(PodcastRepository $podcastRepository, ForumRepository $forumRepository,WatchRepository $watchRepository)
     {
         $this->podcastRepository = $podcastRepository;
         $this->forumRepository = $forumRepository;
+        $this->watchRepository = $watchRepository;
     }
 
     public function academie()
@@ -70,7 +74,11 @@ class ADICOMController extends Controller
 
     public function watch()
     {
-        return view('adicom.watch');
+        $watches = $this->watchRepository->getLatest(9);
+        //$page = $this->getPageInfo('nos-news');
+        $latest_watches = $this->watchRepository->getLatest(2);
+        $categories = $this->watchRepository->getCategories();
+        return view('adicom.watch',compact('watches','latest_watches','categories'));
     }
 
     public function podcast()

@@ -1,53 +1,70 @@
 @extends('layouts.main')
 
-@section('title')
-    @parent ADICOM WATCH
-@endsection
-
-{{--@section('description')--}}
-{{--    {{ setting('site.description') }}--}}
-{{--@endsection--}}
-
-{{--@section('keywords')--}}
-{{--    {{ setting('site.keywords') }}--}}
-{{--@endsection--}}
-
-{{--@section('meta-image')--}}
-{{--    {{ Voyager::image(setting('site.logo')) }}--}}
-{{--@endsection--}}
-
 @section('content')
-    <main id="content" class="site-main">
-        <!-- Inner Banner html start-->
-        <section class="inner-banner-wrap mb-0">
-            <div class="inner-baner-container" style="background-image: url(assets/img/eventum-img1.jpg);">
-                <div class="container">
-                    <div class="inner-banner-content">
-                        <h1 class="inner-title">Single Page</h1>
-                    </div>
+    <div id="main-content" class="site-main clearfix">
+        <div id="content-wrap">
+            <div id="site-content" class="site-content clearfix">
+                <div id="inner-content" class="inner-content-wrap">
+
+                    <section class="page-title bg-st-4">
+                        <div class="overlay-header"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="baner-title fl-st-3">
+                                        <h2 class="title-page white-color wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">ADICOM WATCH</h2>
+                                        <div class="breadcrumbs">
+                                            <ul class="fl-flex">
+                                                <li>
+                                                    <a href="{{url('/')}}" class="white-color wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">ACCUEIL</a>
+                                                </li>
+                                                <li class="breadcrumbs-inner">
+                                                    <span class="trail-end white-color wpw fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">WATCH</span>
+                                                </li>
+                                            </ul>
+                                        </div><!--/breadcrumbs-->
+                                    </div><!--/baner-title-->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tf-latest-new fl-section">
+                        <div class="container">
+                            <div class="row">
+                                @foreach($watches as $podcast)
+                                    <div class="col-lg-4 col-md-4 col-sx-12">
+                                        <div class="box-latest-news wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                            <div class="box-feature fl-rela fl-scale fl-st-2">
+                                                <img src="{{$podcast->image}}" alt="image">
+                                                <div class="box-icon-2">
+                                                    <a href="{{$podcast->link}}" class="player-m play-pause-button"><i class="icon-playplay"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="box-content fl-st-2">
+                                                <p class=" category-2"><a href="{{$podcast->link}}" class="muted5-color">{{$podcast->category->name}}</a></p>
+                                                <a href="{{$podcast->link}}" class="title-news ">{{$podcast->title}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                <div class="post-navigation-wrap">
+                                    <nav>
+                                        <ul class="pagination">
+                                            {{ $watches->links('pagination.bootstrap') }}
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
                 </div>
+                <!--.page-content-->
             </div>
-        </section>
-        <!-- single page section html start -->
-        <div class="single-page-section">
-            <div class="container">
-                <figure class="single-feature-img figure-round-border">
-                    <img src="assets/img/eventum-img8.jpg" alt="">
-                </figure>
-                <div class="page-content">
-                    <p>Amet orci, nibh blanditiis tempor soluta bibendum, omnis dictumst eiusmod felis mollis porta molestiae, laborum fugiat, phasellus minim labore habitasse culpa dignissimos? Distinctio molestias! Incididunt pede nostra mollit quam quaerat voluptas similique accumsan quae accusantium aliqua illum faucibus amet voluptatum natoque sodales. Proident facilisis, atque impedit ullam recusandae ducimus quisquam faucibus dolorum nibh neque libero, laudantium harum labore facilis proident nec doloribus netus. Posuere accusamus nam repudiandae, tincidunt! Id doloribus tempus potenti adipiscing deleniti nemo! Vel, tortor eiusmod omnis molestie sint quisque mollitia molestiae et! Veniam mollitia adipisci, anim eligendi? Turpis laborum leo quisque eos! Suspen sectetuer proident ex nostrud, ratione.</p>
-                    <p>Amet orci, nibh blanditiis tempor soluta bibendum, omnis dictumst eiusmod felis mollis porta molestiae, laborum fugiat, phasellus minim labore habitasse culpa dignissimos? Distinctio molestias! Incididunt pede nostra mollit quam quaerat voluptas similique accumsan quae accusantium aliqua illum faucibus amet voluptatum natoque sodales. Laboris justo dolorem deserunt consectetur ultricies tortor cum tenetur ducimus occaecati imperdiet enim mus ab arcu. Taciti euismod metpus!</p>
-                    <ul>
-                        <li>Purus sequi accusamus? Nibh aut perspiciatis, lorem lorem perspiciatis.</li>
-                        <li>Dictum? Posuere cumque sed illum facilisis leo illum facilisis.</li>
-                        <li>Neque officiis feugiat praesentium qui, aliqua hic commodo praesentium.</li>
-                        <li>Asperiores irure class lobortis veritatis, alias sem lobortis veritatis.</li>
-                        <li>Ipsum eros quaerat deserunt proin porttitor, fugit ultrices.</li>
-                        <li>Volutpat, justo mollit ullamco sagittis duis enim labore, ullamcorper dicta</li>
-                    </ul>
-                    <p>Sequi sociis leo, interdum eos ipsa pharetra, unde fringilla erat vulputate litora nisl adipisicing primis consectetuer erat aliqua reprehenderit unde accusamus earum sollicitudin voluptatum wisi vulputate deleniti, accusamus, animi rutrum. Labore et! Odit, nunc nostra, excepturi dui netus, euismod pariatur? Proin vivamus diamlorem natoque reprehenderit vivamus diamlorem natpo.</p>
-                </div>
-            </div>
+            <!--#inner-content-->
         </div>
-    </main>
+        <!--site-content-->
+    </div>
 @endsection
+
+

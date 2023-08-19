@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('watches', function (Blueprint $table) {
             $table->id();
-            $table->longText('content');
+            $table->string('image');
+            $table->string('link');
+            $table->string('title');
+            $table->integer('category_id')->nullable();
+            $table->string('seo_title')->nullable();
+            $table->text('meta_description');
+            $table->text('meta_keywords');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
