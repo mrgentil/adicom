@@ -99,24 +99,5 @@
             </div>
         </section>
         <!-- reservation and booking section -->
-        <section class="reservation-section">
-            <div class="container">
-                <div class="section-head text-center col-lg-8 offset-lg-2">
-                        <span class="section-sub-title ">
-                            JOIN THE EVENT
-                        </span>
-                    <h3 class="section-title">
-                        DON'T MISS THE OPPORTUNITY, GRAB YOUR TICKETS NOW!
-                    </h3>
-                    <p class="section-paragraph">
-                        Quam amet tristique adipisicing incididunt arcu, excepturi molestie turpis deserunt ducimus
-                        malesuada minus mauris veniam.
-                    </p>
-                </div>
-                <div class="reservation-btn text-center">
-                    <a href="reservation.html" class="button-round-primary">BOOK RESERVATION</a>
-                </div>
-            </div>
-        </section>
     </main>
 @endsection

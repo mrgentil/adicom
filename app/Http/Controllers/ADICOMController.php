@@ -6,6 +6,7 @@ use App\Models\Academy;
 use App\Models\Award;
 use App\Models\AwardGalery;
 use App\Models\Galery;
+use App\Models\Good;
 use App\Repositories\ForumRepository;
 use App\Repositories\PodcastRepository;
 use Illuminate\Http\Request;
@@ -63,7 +64,8 @@ class ADICOMController extends Controller
 
     public function good()
     {
-        return view('adicom.goog');
+        $goods = Good::all();
+        return view('adicom.goog',compact('goods'));
     }
 
     public function watch()
